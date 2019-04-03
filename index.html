@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- StyleSheets Links -->
+    <!-- CSS Reset -->
+    <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+    <!-- BootStramp Link -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <!-- Font Awesome link -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <!-- CSS File -->
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <!-- JQuery -->
+    <script src="https://code.jquery.com/jquery-3.3.1.js"
+        integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+    <!-- JavaScript Link -->
+    <script src="assets/javascript/string.js"></script>
+
+    <title>Chubbs Invoice</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="jumbotron jumbotron-fluid">
+
+            <!-- Task Drop Down menu Row -->
+            <div class="form-row align-items-center task-row">
+                <div class="col-auto my-1">
+                    <label class="mr-sm-2" for="mytaskList">Task</label>
+                    <form>
+                        <select class="custom-select mr-sm-2" id="mytaskList" onchange="mytaskFunction()">
+                            <option value="" disabled selected hidden>Select Task</option>
+                            <option class="Task" value="EN110">Correspondence/Contact</option>
+                            <option class="Task" value="EN120">Meetings w/insured or
+                                representative</option>
+                            <option class="Task" value="EN130">Meeting with other parties</option>
+                            <option class="Task" value="EN210">Inspect Risk</option>
+                            <option class="Task" value="EN220">Research</option>
+                            <option class="Task" value="EN230">Causal Investigation</option>
+                            <option class="Task" value="EN240">Scope/Evaluate Damage</option>
+                            <option class="Task" value="EN310">Reports</option>
+                            <option class="Task" value="EN410">Review</option>
+                            <option class="Task" value="EN420">Estimating</option>
+                            <option class="Task" value="EN430">Expert/Fact Witness</option>
+                            <option class="Task" value="EN510">Travel Time</option>
+                        </select>
+                    </form>
+
+                </div>
+            </div>
+            <!-- Activity Drop Down menu Row -->
+            <div class="form-row align-items-center activity-row">
+                <div class="col-auto my-1">
+                    <label class="mr-sm-2" for="myactivityList">Activity</label>
+                    <form>
+                        <select class="custom-select mr-sm-2" id="myactivityList" onchange="myactivityFunction()">
+                            <option value="" disabled selected hidden>Select Activity</option>
+                            <option class="Activity" value="A101">Plan and Prepare For</option>
+                            <option class="Activity" value="A102">Research</option>
+                            <option class="Activity" value="A103">Draft Review</option>
+                            <option class="Activity" value="A104">Review/Analyze</option>
+                            <option class="Activity" value="A105">Communicate (in firm)</option>
+                            <option class="Activity" value="A106">Communicate (with client)</option>
+                            <option class="Activity" value="A107">Communicate (other outside counsel)</option>
+                            <option class="Activity" value="A108">Communicate (other external)</option>
+                            <option class="Activity" value="A109">Appear For/Attend</option>
+                            <option class="Activity" value="A110">Manage Data Files</option>
+                            <option class="Activity" value="A111">Others</option>
+                        </select>
+                    </form>
+                </div>
+            </div>
+            <!-- Comments Drop Down menu Row -->
+            <div class="row comments-row">
+                <div class="col-sm">
+
+                </div>
+            </div>
+            <!-- Comments Field Fill Row -->
+            <div class="row fill-comments-row">
+                <div class="col-sm">
+
+                </div>
+            </div>
+            <!-- Fill info/Generate button Row -->
+            <div class="row comments-row">
+                <div class="col-sm hours-fill">
+
+                </div>
+                <div class="col-sm info-fill">
+
+                </div>
+                <div class="col-sm generate-button">
+                </div>
+            </div>
+            <!-- Generated text/ copy button -->
+            <div class="row comments-row">
+                <div class="col-sm generated-comment">
+
+                </div>
+                <div class="col-sm copy-button">
+
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
