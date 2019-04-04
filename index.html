@@ -36,10 +36,18 @@
 
 <body>
     <div class="container">
-        <div class="jumbotron jumbotron-fluid">
+
+        <header>
+            <h1>
+                Chubb's TimeSheet Guideline
+            </h1>
+        </header>
+        <hr>
+
+        <div class="jumbotron">
 
             <!-- Task Drop Down menu Row -->
-            <div class="form-row align-items-center task-row">
+            <div class="form-row align-items-center task-row mx-4">
                 <div class="col-auto my-1">
                     <label class="mr-sm-2" for="mytaskList">Task</label>
                     <form>
@@ -64,7 +72,7 @@
                 </div>
             </div>
             <!-- Activity Drop Down menu Row -->
-            <div class="form-row align-items-center activity-row">
+            <div class="form-row align-items-center activity-row mx-4">
                 <div class="col-auto my-1">
                     <label class="mr-sm-2" for="myactivityList">Activity</label>
                     <form>
@@ -86,39 +94,55 @@
                 </div>
             </div>
             <!-- Comments Drop Down menu Row -->
-            <div class="row comments-row">
+            <div class="row comments-row mx-4">
                 <div class="col-sm">
 
                 </div>
             </div>
             <!-- Comments Field Fill Row -->
-            <div class="row fill-comments-row">
+            <div class="row fill-comments-row mx-4">
                 <div class="col-sm">
 
                 </div>
             </div>
             <!-- Fill info/Generate button Row -->
-            <div class="row comments-row">
-                <div class="col-sm hours-fill">
+            <div class="row info-row mx-3">
+
+                <div class="col-sm-3 hours-fill">
+                    <input type="text" class="form-control mt-2 mx-0" id="userinput" value="">
+                    
 
                 </div>
+                <!-- onchange="myinputFunction()" -->
                 <div class="col-sm info-fill">
 
+                    <div class="empty-div"></div>
+
                 </div>
-                <div class="col-sm generate-button">
-                </div>
+
             </div>
+
+            <hr>
             <!-- Generated text/ copy button -->
-            <div class="row comments-row">
-                <div class="col-sm generated-comment">
+            <div class="row comments-row mx-4">
 
+                <div class="col-sm generate-button my-4">
+                    <button onclick="generate()" type="button" class="btn btn-primary">Generate Comment</button>
                 </div>
-                <div class="col-sm copy-button">
 
-                </div>
             </div>
+
+            <div class="row comments-row mx-4">
+
+                <div class="col-sm generated-comment">
+                    <textarea class="form-control" id="CommentArea" rows="3"></textarea>
+                </div>
+
+            </div>
+
         </div>
     </div>
+    
 </body>
 
 </html>
