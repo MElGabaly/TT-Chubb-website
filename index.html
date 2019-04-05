@@ -35,22 +35,75 @@
 </head>
 
 <body>
-    <div class="container">
 
+
+    <div class="container">
         <header>
-            <h1>
-                Chubb's TimeSheet Guideline
-            </h1>
+            <p></p>
         </header>
-        <hr>
 
         <div class="jumbotron">
+
+            <header>
+                <h1>
+                    Chubb's TimeSheet Guideline
+                </h1>
+            </header>
+
+            <hr>
+
+            <div class="row">
+                <div class="col-4">
+                    <div class="list-group" id="list-tab" role="tablist">
+                        <a class="list-group-item list-group-item-action active" id="list-home-list" data-toggle="list"
+                            href="#list-home" role="tab" aria-controls="home">Instructions</a>
+                        <a class="list-group-item list-group-item-action" id="list-profile-list" data-toggle="list"
+                            href="#list-profile" role="tab" aria-controls="profile">Tasks</a>
+                        <a class="list-group-item list-group-item-action" id="list-messages-list" data-toggle="list"
+                            href="#list-messages" role="tab" aria-controls="messages">Activities</a>
+                        <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list"
+                            href="#list-settings" role="tab" aria-controls="settings">Comment Generation</a>
+                        <a class="list-group-item list-group-item-action" id="list-contact-list" data-toggle="list"
+                            href="#list-contact" role="tab" aria-controls="contact">Contact for Help</a>
+                    </div>
+                </div>
+                <div class="col-8">
+                    <div class="tab-content" id="nav-tabContent">
+                        <div class="tab-pane fade show active" id="list-home" role="tabpanel"
+                            aria-labelledby="list-home-list">Please follow all the instructions below and it is
+                            important to start the choices from top to bottom as they are listed below.</div>
+                        <div class="tab-pane fade" id="list-profile" role="tabpanel"
+                            aria-labelledby="list-profile-list">Please choose one of the tasks from the dropdown menu
+                            that is most relevent to the work you have done. once the task has been chosen some fields
+                            will appear to fill, be as specific as possible and to the point when answering them.</div>
+                        <div class="tab-pane fade" id="list-messages" role="tabpanel"
+                            aria-labelledby="list-messages-list">Please choose the most relevent activity to the task
+                            you chose</div>
+                        <div class="tab-pane fade" id="list-settings" role="tabpanel"
+                            aria-labelledby="list-settings-list">When you finish filling in all the field, press on
+                            "Generate Comment" Button, and the comment will appear in the textbox shown below. Then
+                            press on copy comment (An Alert is going to appear on the top indicating the comment has
+                            been copied to the clipboard), so you can past it in deltek. Finally, press on generate new
+                            comment, which will empty all the field so you can start a new comment</div>
+                        <div class="tab-pane fade" id="list-contact" role="tabpanel"
+                            aria-labelledby="list-contact-list">Please Contact me (Mo ElGabaly) or Chris Kahanek, if you
+                            have any questions about the program or you have any ideas for improvments.</div>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <hr>
+
+
 
             <!-- Task Drop Down menu Row -->
             <div class="form-row align-items-center task-row mx-4">
                 <div class="col-auto my-1">
                     <label class="mr-sm-2" for="mytaskList">Task</label>
                     <form>
+
                         <select class="custom-select mr-sm-2" id="mytaskList" onchange="mytaskFunction()">
                             <option value="" disabled selected hidden>Select Task</option>
                             <option class="Task" value="EN110">Correspondence/Contact</option>
@@ -58,12 +111,12 @@
                                 representative</option>
                             <option class="Task" value="EN130">Meeting with other parties</option>
                             <option class="Task" value="EN210">Inspect Risk</option>
-                            <option class="Task" value="EN220">Research</option>
-                            <option class="Task" value="EN230">Causal Investigation</option>
+                            <!-- <option class="Task" value="EN220">Research</option> -->
+                            <!-- <option class="Task" value="EN230">Causal Investigation</option> -->
                             <option class="Task" value="EN240">Scope/Evaluate Damage</option>
                             <option class="Task" value="EN310">Reports</option>
                             <option class="Task" value="EN410">Review</option>
-                            <option class="Task" value="EN420">Estimating</option>
+                            <!-- <option class="Task" value="EN420">Estimating</option> -->
                             <option class="Task" value="EN430">Expert/Fact Witness</option>
                             <option class="Task" value="EN510">Travel Time</option>
                         </select>
@@ -78,8 +131,8 @@
                     <form>
                         <select class="custom-select mr-sm-2" id="myactivityList" onchange="myactivityFunction()">
                             <option value="" disabled selected hidden>Select Activity</option>
-                            <option class="Activity" value="A101">Plan and Prepare For</option>
-                            <option class="Activity" value="A102">Research</option>
+                            <!-- <option class="Activity" value="A101">Plan and Prepare For</option> -->
+                            <!-- <option class="Activity" value="A102">Research</option> -->
                             <option class="Activity" value="A103">Draft Review</option>
                             <option class="Activity" value="A104">Review/Analyze</option>
                             <option class="Activity" value="A105">Communicate (in firm)</option>
@@ -88,7 +141,7 @@
                             <option class="Activity" value="A108">Communicate (other external)</option>
                             <option class="Activity" value="A109">Appear For/Attend</option>
                             <option class="Activity" value="A110">Manage Data Files</option>
-                            <option class="Activity" value="A111">Others</option>
+                            <!-- <option class="Activity" value="A111">Others</option> -->
                         </select>
                     </form>
                 </div>
@@ -105,25 +158,42 @@
 
                 </div>
             </div>
+
+            <!-- ////////////////////////////////////////////////////// -->
             <!-- Fill info/Generate button Row -->
             <div class="row info-row mx-3">
-
                 <div class="col-sm-3 hours-fill">
                     <input type="text" class="form-control mt-2 mx-0" id="userinput" value="">
-                    
-
                 </div>
-                <!-- onchange="myinputFunction()" -->
+
                 <div class="col-sm info-fill">
-
                     <div class="empty-div"></div>
-
                 </div>
-
             </div>
 
+            <div class="row info-row1 mx-3">
+                <div class="col-sm-3 hours-fill">
+                    <input type="text" class="form-control mt-2 mx-0" id="userinput1" value="">
+                </div>
+
+                <div class="col-sm info-fill">
+                    <div class="empty-div1"></div>
+                </div>
+            </div>
+
+            <div class="row info-row2 mx-3">
+                <div class="col-sm-3 hours-fill">
+                    <input type="text" class="form-control mt-2 mx-0" id="userinput2" value="">
+                </div>
+
+                <div class="col-sm info-fill">
+                    <div class="empty-div2"></div>
+                </div>
+            </div>
+            <!-- ////////////////////////////////////////////////////// -->
+
             <hr>
-            <!-- Generated text/ copy button -->
+            <!-- Generate text button -->
             <div class="row comments-row mx-4">
 
                 <div class="col-sm generate-button my-4">
@@ -132,6 +202,7 @@
 
             </div>
 
+            <!-- Generated Comment AREA -->
             <div class="row comments-row mx-4">
 
                 <div class="col-sm generated-comment">
@@ -140,9 +211,27 @@
 
             </div>
 
+            <hr>
+
+            <!-- Enter new comment/Copy comment buttons -->
+            <div class="row mx-3">
+
+                <div class="col-sm my-4 text-center">
+                    <button onclick="CopyText()" type="button" class="btn btn-success center-block">Copy Generated
+                        Comment</button>
+                </div>
+
+
+                <div class="col-sm my-4 text-center">
+                    <button onclick="history.go(0)" type="button" class="btn btn-warning center-block">Generate New
+                        Comment</button>
+                </div>
+
+            </div>
+
         </div>
     </div>
-    
+
 </body>
 
 </html>
